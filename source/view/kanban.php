@@ -1,15 +1,16 @@
-<h1 class="text-center mb-3">eKanban</h1>
+<h1 class="mb-3">Kanban</h1>
 <section class="mb-3">
-    <h2>O que é o eKanban?</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta consequuntur accusantium totam perspiciatis, deleniti pariatur earum delectus quos. Delectus maiores facilis quam accusantium! Possimus aspernatur eos autem reiciendis dicta!</p>
+    <h2>O que é o Kanban?</h2>
+    <span class="fst-italic text-secondary">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis magna auctor, dignissim lacus porta, pharetra purus. Mauris fermentum tortor consequat, consectetur justo ultrices, tempor quam. Fusce pellentesque aliquet vulputate. Sed vitae massa dignissim, condimentum lectus vitae, vestibulum urna. Aenean maximus, ligula nec scelerisque lobortis, nibh elit tempor odio, et sagittis eros nulla ac orci. Donec nec varius ligula, id dapibus turpis. Etiam sapien felis, tempus at porta quis, aliquam eu ligula. Quisque auctor nisi quis sollicitudin varius. Ut tempor rutrum tortor nec varius. Aliquam ante sapien, blandit at varius non, semper nec massa. Cras nec eros in nisi tincidunt gravida quis sed ipsum. Etiam aliquet et mi vitae lacinia. Proin fringilla vulputate mauris.</p>
 </section>
-<section class="mb-3 alert alert-secondary">
+<section class="alert alert-secondary mb-0">
     <h3>Decisões Técnicas</h3>
     <h4>Estrutura e Forma</h4>
     <p>A arquitetura deste sistema é baseada nos padrões <u>MVC</u>, <u>DAO</u> e <u>Front Controller</u>. Tais escolhas foram feitas com o objetivo de criar um nível adequado de separação de responsabilidades, fator que facilita a manutenção da base de códigos e viabiliza a escalabilidade do software.</p>
     <p>Além disso, o sistema foi projetado para trabalhar como uma <u>página web clássica</u>. Isto se deve a uma preferência deste desenvolvedor, que defende que diversas aplicações (sobretudo as empresarias) não devem ser desenvolvidas como SPAs se não forem de fato multiplataforma, visto que tal prática aumenta a complexidade do projeto, altera o controle de fluxo natural dos navegadores (voltar/avançar, abrir em múltiplas abas) e pode causar lentidão nos casos de excesso de requisições assíncronas em redes de baixo desempenho, fatores que impactam negativamente a experiência do usuário.</p>
     <h4>Back-End</h4>
-    <p class="mb-0">A linguem escolhida para o desenvolvimento do back-end da aplicação foi o <u>PHP</u> em sua <u>versão 8</u>. Seguem alguns dos motivos que influenciaram esta escolha:</p>
+    <p>A linguem escolhida para o desenvolvimento do back-end da aplicação foi o <u>PHP</u> em sua <u>versão 8</u>. Seguem alguns dos motivos que influenciaram esta escolha:</p>
         <ol>
             <li>Trata-se de um sistema web, cenário em que o PHP já provou seu valor;</li>
             <li>Por ser uma linguagem consolidada e com documentação abundante, a busca por ajuda se torna bastante fácil;</li>

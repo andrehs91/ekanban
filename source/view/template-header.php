@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= isset($title) ? $title . " - " : "" ?>Kanban</title>
+    <title><?= isset($title) ? "$title - " : "" ?>Kanban</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/kanban.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
-
 <body>
     <header class="bg-dark text-white">
-        <nav class="container px-2 navbar navbar-expand-lg navbar-dark">
+        <nav class="container navbar navbar-expand-sm navbar-dark">
             <a class="navbar-brand fw-bold" href="/">Kanban</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav">
+                <?php $menu = [
+                    "/projetos" => "Projetos",
+                    "/tarefas" => "Tarefas",
+                    "/relatorios" => "Relatórios"
+                ] ?>
+                <?php foreach ($menu as $uri => $text): ?>
                     <li class="nav-item">
-                        <a class="nav-link<?= $page == 'projetos' ? ' active' : '' ?>" href="/projetos">Projetos</a>
+                        <?php $css = isset($rota['uri']) && $route["uri"] == $uri ? "active" : ""; ?>
+                        <a class="nav-link <?= $css ?>" href="<?= $uri ?>"><?= $text ?></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link<?= $page == 'tarefas' ? ' active' : '' ?>" href="/tarefas">Tarefas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link<?= $page == 'relatorios' ? ' active' : '' ?>" href="/relatorios">Relatórios</a>
-                    </li>
+                <?php endforeach; ?>
                 </ul>
             </div>
         </nav>
     </header>
-    <main class="py-3">
-        <div class="container">
+    <main class="container py-3">

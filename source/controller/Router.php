@@ -35,7 +35,7 @@ class Router
         $rota = [];
         foreach ($this->registeredRoutes as $rotaValida) {
             if ($this->httpMethod === $rotaValida["method"] && $this->uri === $rotaValida["uri"]) {
-                $rota["situation"] = "FOUND";
+                $rota["situation"] = "OK";
                 $rota["uri"] = $rotaValida["uri"];
                 $rota["controller"] = $rotaValida["controller"];
                 return $rota;
