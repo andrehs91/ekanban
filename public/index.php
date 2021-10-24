@@ -9,8 +9,7 @@ require_once "../autoload.php";
 // require_once "../vendor/autoload.php";
 
 use Kanban\Controller\Router;
-// use Kanban\Controller\MySQLConnection;
-use Kanban\Controller\SQLiteConnection;
+use Kanban\Controller\MySQLConnection;
 
 $router = new Router($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 $router->registerRoute('GET', '/kanban', 'GetKanban');
@@ -32,7 +31,6 @@ switch ($route["situation"]) {
     case "OK":
         try {
             // $connection = MySQLConnection::createConnection();
-            $connection = SQLiteConnection::createConnection();
             require "../source/controller/" . $route["controller"] . ".php";
         } catch (Throwable $throwable) {
             // Transformar em LOG

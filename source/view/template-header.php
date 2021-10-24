@@ -20,7 +20,8 @@
                 <?php $menu = [
                     "/projetos" => "Projetos",
                     "/tarefas" => "Tarefas",
-                    "/relatorios" => "Relatórios"
+                    "/relatorios" => "Relatórios",
+                    "/configuracao" => "Configuração"
                 ] ?>
                 <?php foreach ($menu as $uri => $text): ?>
                     <li class="nav-item">
